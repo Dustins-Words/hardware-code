@@ -1,0 +1,36 @@
+// Calls event in Particle IDE - I need to add this into the DW.ino code
+// Particle.publish("twilio", textMSG, 60, PRIVATE);
+
+{
+    "eventName": "sendText0",
+    "url": "https://api.twilio.com/2010-04-01/Accounts/ACbd98b657f0a49103463f08908afdeabd/Messages",
+    "requestType": "POST",
+    "auth": {
+        "username": "ACbd98b657f0a49103463f08908afdeabd", //twilio AccountSid
+        "password": "iNeedOutPassword" //twilio AUTH
+    },
+    "form": {
+        "From" : "+13236213092", //your twilio number
+        "To" : "+00000000000",  //recipient's number
+        "Body" : "{{PARTICLE_EVENT_VALUE}}"
+    },
+    "mydevices": true
+}
+
+// Add all 6 event names in
+
+{
+    "eventName": "sendText1",
+    "url": "https://api.twilio.com/2010-04-01/Accounts/ACbd98b657f0a49103463f08908afdeabd/Messages",
+    "requestType": "POST",
+    "auth": {
+        "username": "ACbd98b657f0a49103463f08908afdeabd", //twilio AccountSid
+        "password": "iNeedOutPassword" //twilio AUTH
+    },
+    "form": {
+        "From" : "+13236213092", //your twilio number
+        "To" : "+00000000000",  //recipient's number
+        "Body" : "{{PARTICLE_EVENT_VALUE}}"
+    },
+    "mydevices": true
+}
